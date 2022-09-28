@@ -1,0 +1,25 @@
+{
+  "name": "last",
+  "author": "MakeAwesomeHappen",
+  "version": "1.0.0",
+  "keywords": ["pebble-app"],
+  "private": true,
+  "dependencies": {},
+  "pebble": {
+    "main": {
+      "rockyjs": "src/rocky/index.js",
+      "pkjs": "src/pkjs/index.js"
+    },
+    "displayName": "last",
+    "uuid": "1c629a81-f0a9-4ea6-9342-f360034dce3f",
+    "projectType": "rocky",
+    "sdkVersion": "3",
+    "enableMultiJS": true,
+    "watchapp": {
+      "watchface": true
+    },
+    "resources": {
+      "media": []
+    }
+  }
+}

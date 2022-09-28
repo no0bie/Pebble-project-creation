@@ -1,0 +1,86 @@
+
+<head>
+    <title>Welcome</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class='top-bar'>
+    <img src='/logo.png'></img>
+    <div class='top-bar-a'>
+      <a href='#'>Projects</a>
+    </div>
+  </div>
+  <div class='body-no-nav'>
+    <div class='info'>
+      <h1>ALL YOUR PROJECTS</h1>
+      <button id="create-project">Create</button>
+
+      <button id="import-project">Import</button>
+      <p></p>
+    </div>
+
+    <div class="popup-box" id="popup-box-id" style="visibility: <%= visibility %>;" >
+      <div class="box">
+        <span class="close-icon" id="close-popup">x</span>
+        <form method="POST" action="/new">
+          <label>Project Name: <input type="text" name="projectName" autocomplete="off"/></label>
+          <br>
+          <div class="project-options">
+            <label>Project options:
+            <label><input name="type" type="radio" id="rocky" value="rocky" onchange="currRadioButton()" checked> Rocky</label>
+            <label class="c" ><input name="type" type="radio" id="c" class="c" value="c"  onchange="currRadioButton()"> C</label>
+          </div>
+          <div id="c-options" style="visibility: hidden;">
+              <label><input id="js" type="checkbox" name="js" value="--javascript"> Javascript</label>
+              <label style="padding-right: 25px;"><input id="simple" type="checkbox" name="simple" value="--simple"> Simple   </label><br>
+          </div>
+          </label>
+        
+          <input type="submit" value="Create"/>
+          <% if (success == "err_empty") { %>
+            <script> 
+              alert("Please enter a project name") 
+            </script> 
+          <% } %>
+  
+          <% if (success == "err_name") { %>
+          <script> 
+              alert("Project already exists") 
+          </script> 
+          <% } %>
+  
+          <% if (success == "succ") { %>
+            <br></br>
+            <div>
+                  <%= message %> 
+              </div>
+              <% } %>
+  
+      </form>
+      </div>
+    </div>
+
+    <div class='project-list'>
+        <% if (projects) { %>
+        <table>
+          <tr>
+            <th>Project</th>
+            <th>Last Modified</th>
+            <th>Last Built</th>
+          </tr>
+          <% for(var i=0; i < projects.name.length; i++) { %>
+
+            <tr>
+              <td><a href=<%= projects.name[i] %> ><%= projects.name[i] %></a></td>
+              <td><%= projects.modified[i] %></td>
+              <td><%= projects.build[i] %></td>
+            </tr>
+          <% } %>
+        </table>
+        <% } %>
+    </div>
+  </div>
+</body>
+<script src='projects.js'></script>

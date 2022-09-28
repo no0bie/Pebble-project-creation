@@ -1,0 +1,55 @@
+<head>
+    <title>Welcome</title>
+    <link rel="stylesheet" href="/style.css">
+    
+</head>
+<body>
+
+<label for="themes">Choose a theme:</label>
+<select name="themes" id="theme-picker">
+    <option value="monokai">Monokai</option>
+    <option value="eclipse">Eclipse</option>
+</select>
+
+<button onclick="settings()">Settings</button>
+<button onclick="compilation()">Compilation</button>
+
+<div class="popup-box" id="popup-box-id" style="visibility: hidden;" >
+    <div class="box">
+      <span class="close-icon" id="close-popup">x</span>
+      <form method="POST" action="/new">
+        <label>Phone IP: <input type="text" name="projectName" autocomplete="off"/></label>
+        <br>
+        <div class="project-options">
+          <label>Project options:
+        </div>
+        <label><input id="auto-completion" type="checkbox"> Autocompletion</label>
+        <label style="padding-right: 25px;"><input id="simple" type="checkbox" name="simple" value="--simple"> Simple   </label><br>
+        </label>
+      
+        <input type="submit" value="Create"/>
+    </form>
+    </div>
+</div>
+<div class="organization-code">
+    
+    <div class="child">
+    <% var count = 0; for(var i=0; i < file.dir.length; i++) { %>
+        <h4><%= file.dir[i] %></h4>
+        <% for(var j=0; j < file.content[i].length; j++) { %>
+            <p> - <button onclick="load('<%= count %>')"><%= file.content[i][j] %></button></p>
+            <% count++ %>
+        <% } %>
+    <% } %>
+    </div>
+    <div class="child" id="editor"></div>
+</div>
+<span id="loaded-code" value="<%= fileContent.length %>">
+    <% for(var i=0; i < fileContent.length; i++) { %><div><%= fileContent[i] %></div><% } %>
+</span>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.14/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://rawgithub.com/ajaxorg/ace-builds/master/src/ext-language_tools.js" type="text/javascript"></script>
+<script src="/currProject.js"></script>
+
+</body>

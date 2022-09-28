@@ -1,0 +1,25 @@
+{
+  "name": "seond",
+  "author": "MakeAwesomeHappen",
+  "version": "1.0.0",
+  "keywords": ["pebble-app"],
+  "private": true,
+  "dependencies": {},
+  "pebble": {
+    "main": {
+      "rockyjs": "src/rocky/index.js",
+      "pkjs": "src/pkjs/index.js"
+    },
+    "displayName": "seond",
+    "uuid": "5d5f823d-5174-4fdb-8805-e83cead4c25f",
+    "projectType": "rocky",
+    "sdkVersion": "3",
+    "enableMultiJS": true,
+    "watchapp": {
+      "watchface": true
+    },
+    "resources": {
+      "media": []
+    }
+  }
+}

@@ -1,0 +1,181 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+}
+
+.body-no-nav {
+  min-height: 100vh;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.info button{
+  margin: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.info h1 {
+  padding-right: 10px;
+}
+
+.project-list {
+  display: flex;
+  justify-content: center;
+}
+
+.organization-code {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.child {
+  margin-top: 20px
+} 
+
+.child:first-child {
+  padding-left: 20px;
+  width: 15%;  
+}
+
+.child:last-child{
+  width: 100%;
+  margin-left: 20px;
+}
+.ace_gutter {
+  padding-top: 10px;
+}
+
+.ace_content {
+  padding-top: 10px;
+}
+
+.child:last-child textarea{
+  width: 100%;
+  height: 100%;
+}
+
+.project-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-right: 109px;
+
+}
+
+
+table {
+  border-collapse: collapse;
+  width: 90%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
+
+#c-options{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 140px;
+}
+
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.top-bar {
+  overflow: hidden;
+  background-color: #333;
+  padding-left: 10%;
+}
+
+.top-bar-a {
+  float: right;
+  text-align: end;
+  padding-top: 30px;
+  padding-right: 45%;
+  text-decoration: none;
+  font-size: 40px;
+}
+
+
+.top-bar-a a{
+
+  text-decoration: none;
+  color: #f2f2f2;
+}
+
+.top-bar img {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.top-bar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.top-bar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.popup-box {
+  position: fixed;
+  background: #00000050;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+ 
+.box {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+  height: auto;
+  max-height: 70vh;
+  margin-top: calc(100vh - 85vh - 20px);
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  border: 1px solid #999;
+  overflow: auto;
+  text-align: center; 
+}
+
+ 
+.close-icon {
+  content: 'x';
+  cursor: pointer;
+  position: fixed;
+  right: calc(15% - 30px);
+  top: calc(100vh - 85vh - 33px);
+  background: #ededed;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  line-height: 20px;
+  text-align: center;
+  border: 1px solid #999;
+  font-size: 20px;
+}

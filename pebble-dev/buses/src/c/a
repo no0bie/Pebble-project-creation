@@ -1,0 +1,5 @@
+includ <asd>
+
+if (test && "asd") {
+	'asd'
+}

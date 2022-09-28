@@ -1,0 +1,30 @@
+{
+    "targetPlatforms": [
+        "aplite", 
+        "basalt", 
+        "chalk", 
+        "diorite"
+    ], 
+    "displayName": "buses", 
+    "name": "buses", 
+    "messageKeys": {
+        "dummy": 10000
+    }, 
+    "companyName": "MakeAwesomeHappen", 
+    "enableMultiJS": true, 
+    "versionLabel": "1.0", 
+    "capabilities": [], 
+    "sdkVersion": "3", 
+    "appKeys": {
+        "dummy": 10000
+    }, 
+    "longName": "buses", 
+    "shortName": "buses", 
+    "watchapp": {
+        "watchface": false
+    }, 
+    "resources": {
+        "media": []
+    }, 
+    "uuid": "592331e8-e4c4-4f4e-a0a0-3fbec93d32ac"
+}
